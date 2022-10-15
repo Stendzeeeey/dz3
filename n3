@@ -1,0 +1,39 @@
+Написать программу для нахождения корней квадратного уравнения по заданным коэффициентам a, b, c. 
+Разработать все возможные варианты тестов («белый ящик») 
+
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+
+using namespace std;
+void main() {	
+	setlocale(LC_ALL, "rus");
+	float a = 0, b = 0, c = 0;
+	
+	cout << "Введите 3 значения: a, b, c" << endl;
+	cout << "a = " << " ";
+	cin >> a;
+	cout << "b = " << " ";
+	cin >> b;
+	cout << "c = " << " ";
+	cin >> c;
+	discriminant1(a, b, c);
+
+void discriminant1(float a, float b, float c) {
+	float d = NULL, x1 = NULL, x2 = NULL;
+	d = (b * b) - 4 * a * c;
+	if (d > 0) {
+		x1 = (-b + sqrt(d)) / (2 * a);
+		x2 = (-b - sqrt(d)) / (2 * a);
+		if (x1 > x2) {
+			cout << x1 << " " << x2 << endl;
+		}
+		else {
+			cout << x2 << " " << x1 << endl;
+		}
+	}
+	else {
+		cout << "Дискриминант меньше нуля, нет действительных корней" << endl;
+	}
+}
+
