@@ -1,0 +1,23 @@
+В файле, где в 1 строка стоит число n, а во 2 последовательность из n-натуральных чисел, разделенгных пробелами. Определить, правда ли, что все числа данной последовательности состоят из одинакового количества цифр.
+#include "pt4.h"
+#include "fstream"
+using namespace std;
+
+void Solve()
+{
+    Task("TextFile19");
+    int n, d, m, count=0, i;
+    bool otvet;
+    ifstream file;
+    file.open("d.txt");
+    file >> n >> m >> count;
+    for (i = 0; i <= n; i++, file >> m) {
+        while (n != 0) {
+            n /= 10;
+            count++;
+        }
+    otvet = (n == 1) && count == m;
+        }
+        pt << otvet;
+        file.close();
+    }
