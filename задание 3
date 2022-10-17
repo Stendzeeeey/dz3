@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int a = 0;
+    int mh = 1;
+    setlocale(LC_ALL, "Russian");
+    do
+    {
+        cout << "\nВведите а\n";
+        cin >> a;
+        if ((abs(a) % 2 == 0) && (a > mh))
+        {
+            mh = a;
+        }
+    } while (a != 0);
+    if (mh == 1)
+    {
+        cout << "Нет чисел";
+    }
+    else
+    {
+        cout << mh;
+    }
+}
+
+Проверка:
+1, 3, 5, 7, 9, 0  Ответ: 2
+-5, -7, 0  Ответ: нет чисел
+0 Ответ: нет чисел
