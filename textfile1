@@ -1,3 +1,4 @@
+1. Вывести числа из ряда Фибоначчи в заданном промежутке a b.
 #include "pt4.h"
 #include <iostream>
 #include <fstream>
